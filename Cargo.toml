@@ -1,0 +1,22 @@
+[package]
+name = "cliply"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+author = ["Angel Dollface <youreccentricity@outlook.com>"]
+description= "Making command-line interfaces in Rust easy."
+homepage = "https://github.com/angeldollface/cliply"
+repository = "https://github.com/angeldollface/cliply"
+documentation = "https://docs.rs/cliply/0.1.0"
+readme = "README.markdown"
+keywords = [
+	"argument",
+	"cli",
+	"arg",
+	"parser",
+]
+categories = ["command-line-interface"]
+exclude = ["/.github", ".gitignore"]
+
+[dependencies]
+coutils =  "1.4.0"

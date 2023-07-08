@@ -1,0 +1,76 @@
+on: [push]
+name: Cliply CI
+jobs:
+  build_and_test:
+    name: Cliply CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+      - name: Testing the short generic greeting option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -g
+      - name: Testing the long generic greeting option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --greet
+      - name: Testing the no-dash option for the generic greeting.
+        uses: actions-rs/cargo@v1
+        with:
+            command: run
+            args: -- greet
+      - name: Testing the short custom greeting option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -c Angel
+      - name: Testing the long custom greeting option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --cgreet Angel
+      - name: Testing the no-dash option for the custom greeting.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- cgreet Angel
+      - name: Testing the short version option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -v
+      - name: Testing the long version option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --version
+      - name: Testing the no-dash option for the version info.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- version
+      - name: Testing the short help option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -h
+      - name: Testing the long help option.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --help
+
+      - name: Testing the no-dash option for the help info.
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- help
