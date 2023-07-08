@@ -1,5 +1,5 @@
 /*
-CLIPLY by Alexander Abraham a.k.a. "Angel Dollface".
+CLIPLY by "Angel Dollface".
 Licensed under the MIT license.
 */
 
@@ -22,7 +22,7 @@ pub fn main() -> () {
     let mut my_app: App = App::new(
         &"Test App",
         &"1.0.0",
-        &"Alexander Abraham"
+        &"Angel Dollface"
     );
 
     // Adding a greeting without data. Note the use of "false".

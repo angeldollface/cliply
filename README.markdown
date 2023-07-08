@@ -18,7 +18,7 @@
 
 ## INSTALLATION
 
-To use ***Cliply*** in your rust project, add this line to your project's `Cargo.toml`'s `[dependencies]` section:
+To use ***Cliply*** in your Rust project add this line to your project's `Cargo.toml`'s `[dependencies]` section:
 
 ```TOML
 cliply = "0.1.0"
@@ -30,15 +30,15 @@ To import the library into your project's code, use this line:
 use cliply::App;
 ```
 
-To find out exactly how to use the library, please read the section below.
+To find out exactly how to use the library please read the section below.
 
 ## EXAMPLE
 
-An example of how to use ***Cliply's*** APIs in a sample app can bew viewed below:
+An example of how to use ***Cliply's*** APIs in a sample app can be viewed below:
 
 ```Rust
 /*
-CLIPLY by Alexander Abraham a.k.a. "Angel Dollface".
+CLIPLY by "Angel Dollface".
 Licensed under the MIT license.
 */
 
@@ -61,7 +61,7 @@ pub fn main() -> () {
     let mut my_app: App = App::new(
         &"Test App",
         &"1.0.0",
-        &"Alexander Abraham"
+        &"Angel Dollface"
     );
 
     // Adding a greeting without data. Note the use of "false".
