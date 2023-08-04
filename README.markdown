@@ -21,7 +21,7 @@
 To use ***Cliply*** in your Rust project add this line to your project's `Cargo.toml`'s `[dependencies]` section:
 
 ```TOML
-cliply = "0.1.0"
+cliply = "0.2.0"
 ```
 
 To import the library into your project's code, use this line:
@@ -115,7 +115,7 @@ pub fn main() -> () {
 }
 ```
 
-If you would like to read detailed documentation, you can do so by visiting [this link](https://docs.rs/cliply/0.1.0).
+If you would like to read detailed documentation, you can do so by visiting [this link](https://docs.rs/cliply/0.2.0).
 
 ## CHANGELOG
 
@@ -123,6 +123,11 @@ If you would like to read detailed documentation, you can do so by visiting [thi
 
 - Initial release.
 - Upload to GitHub.
+
+### Version 0.2.0
+
+- Updated documentation.
+- Updated the version of the `coutils` crate.
 
 ## NOTE
 
